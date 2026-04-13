@@ -343,7 +343,7 @@ export default function OutlawPage() {
                   </div>
                   {isFallback && (
                     <div style={{ padding: '8px 12px', background: '#fff9e6', border: '1px solid #ffeeba', borderRadius: '6px', color: '#856404', fontSize: '11px', fontFamily: 'var(--o-font-mono, monospace)' }}>
-                      ⚠️ <strong>MOCK FALLBACK INITIATED:</strong> The AI provider (Gemini) is currently experiencing high demand. The system has automatically fallen back to validated mock data to ensure the demo continues without disruption.
+                      ⚠️ <strong>MOCK FALLBACK INITIATED:</strong> The AI provider (Gemini) is currently experiencing high demand. The system has automatically fallen back to validated mock data to ensure the demo continues without disruption. Please try after a while sorry for inconvenience.
                     </div>
                   )}
                 </div>

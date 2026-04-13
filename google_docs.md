@@ -1,0 +1,27 @@
+AI PM Assignment – Troopod
+Goal
+Build a simple AI working flow where a user can:
+Input an ad creative (link/upload)
+Input a landing page URL
+And get a personalized landing page as output as per the ad creative
+If anything is unclear, feel free to make assumptions, just mention them.
+
+What we expect
+Live Demo / Link (Mandatory)
+A working link where we can:
+Input ad + URL
+See the generated personalized page
+Please note that the personalized page shouldn’t be a completely new page, it should be existing page enhanced as per CRO principles + personalized as per the ad creative
+(No-code tools / prototypes / partial builds are fine)
+
+Brief Explanation (Google Doc)
+How your system works (flow)
+Key components / agent design
+How you handle:
+Random changes
+Broken UI
+Hallucinations
+Inconsistent outputs
+
+Deadline
+3 days from receiving this assignment 

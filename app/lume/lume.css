@@ -1,0 +1,352 @@
+/* ============================================
+   LUMÉ — Premium DTC Skincare Landing Page
+   Aesthetic: Clean, minimal, premium
+   Contrast with the brutalist tool
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap');
+
+.lume-page {
+  --lume-bg: #FFFBF7;
+  --lume-text: #1A1A1A;
+  --lume-text-soft: #6B6B6B;
+  --lume-accent: #C8956C;
+  --lume-accent-dark: #A87550;
+  --lume-border: #E8E0D8;
+  --lume-card: #FFFFFF;
+  --lume-green: #4A7C59;
+  --lume-font-body: 'DM Sans', sans-serif;
+  --lume-font-display: 'DM Serif Display', serif;
+
+  font-family: var(--lume-font-body);
+  background: var(--lume-bg);
+  color: var(--lume-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --- Urgency Banner (only shows when personalized) --- */
+.lume-urgency {
+  background: var(--lume-text);
+  color: #FFF;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  animation: lume-urgency-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lume-urgency-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.lume-urgency .urgency-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF4444;
+  margin-right: 8px;
+  animation: urgency-dot-blink 1s ease-in-out infinite;
+}
+
+@keyframes urgency-dot-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* --- Nav --- */
+.lume-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--lume-border);
+}
+
+.lume-brand {
+  font-family: var(--lume-font-display);
+  font-size: 28px;
+  color: var(--lume-text);
+  letter-spacing: 0.02em;
+}
+
+.lume-nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.lume-nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lume-text-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.lume-nav-links a:hover {
+  color: var(--lume-text);
+}
+
+/* --- Hero --- */
+.lume-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.lume-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 48px 64px 64px;
+}
+
+.lume-hero-tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--lume-accent);
+  margin-bottom: 16px;
+}
+
+.lume-hero h1 {
+  font-family: var(--lume-font-display);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--lume-text);
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+}
+
+.lume-hero-sub {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--lume-text-soft);
+  max-width: 420px;
+  margin-bottom: 32px;
+  transition: all 0.5s ease;
+}
+
+.lume-hero-cta {
+  display: inline-block;
+  font-family: var(--lume-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 16px 40px;
+  background: var(--lume-text);
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.lume-hero-cta:hover {
+  background: var(--lume-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.lume-hero-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lume-hero-image-placeholder {
+  font-family: var(--lume-font-display);
+  font-size: 120px;
+  color: var(--lume-accent);
+  opacity: 0.15;
+  user-select: none;
+}
+
+/* --- Social Proof Strip --- */
+.lume-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px 48px;
+  background: var(--lume-card);
+  border-top: 1px solid var(--lume-border);
+  border-bottom: 1px solid var(--lume-border);
+  transition: all 0.5s ease;
+}
+
+.lume-social-proof-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--lume-text-soft);
+  text-align: center;
+}
+
+.lume-social-proof-stars {
+  color: var(--lume-accent);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.lume-social-proof-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lume-green);
+  padding: 4px 12px;
+  border: 1px solid var(--lume-green);
+  border-radius: 20px;
+}
+
+/* --- Features --- */
+.lume-features {
+  padding: 80px 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lume-features-title {
+  font-family: var(--lume-font-display);
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--lume-text);
+}
+
+.lume-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.lume-feature-card {
+  text-align: center;
+  padding: 32px 24px;
+  border: 1px solid var(--lume-border);
+  background: var(--lume-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lume-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+.lume-feature-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.lume-feature-card h3 {
+  font-family: var(--lume-font-display);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.lume-feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--lume-text-soft);
+}
+
+/* --- Footer --- */
+.lume-footer {
+  text-align: center;
+  padding: 40px 48px;
+  border-top: 1px solid var(--lume-border);
+  font-size: 12px;
+  color: var(--lume-text-soft);
+}
+
+/* --- Personalized highlight --- */
+.lume-patched {
+  position: relative;
+}
+
+.lume-patched::after {
+  content: 'PERSONALIZED';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 2px 6px;
+  background: #2563EB;
+  color: #FFF;
+  z-index: 10;
+}
+
+/* --- Personalized Mode Banner --- */
+.lume-personalized-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: #FFF;
+  padding: 12px 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 3px solid #2563EB;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 4px 4px 0px #2563EB;
+}
+
+.lume-personalized-banner .banner-dot {
+  width: 6px;
+  height: 6px;
+  background: #2563EB;
+  border-radius: 50%;
+  animation: banner-blink 1s steps(1) infinite;
+}
+
+@keyframes banner-blink {
+  50% { opacity: 0; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .lume-hero {
+    grid-template-columns: 1fr;
+  }
+  .lume-hero-content {
+    padding: 48px 24px;
+  }
+  .lume-hero-image {
+    min-height: 200px;
+  }
+  .lume-nav {
+    padding: 16px 24px;
+  }
+  .lume-features {
+    padding: 48px 24px;
+  }
+  .lume-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .lume-social-proof {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

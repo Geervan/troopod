@@ -22,6 +22,9 @@ const PATCHED = {
   urgency_banner: 'Offer ends midnight tonight.',
 };
 
+// Utility to strip markdown chars from AI output
+const clean = (str) => typeof str === 'string' ? str.replace(/[*_]/g, '') : str;
+
 function LumeContent() {
   const searchParams = useSearchParams();
   const isPersonalized = searchParams.get('personalized') === 'true';
@@ -30,7 +33,7 @@ function LumeContent() {
   const copy = { ...(isPersonalized ? PATCHED : ORIGINAL) };
   if (isPersonalized) {
     searchParams.forEach((val, key) => {
-      if (val && key !== 'personalized') copy[key] = val;
+      if (val && key !== 'personalized') copy[key] = clean(val);
     });
   }
 

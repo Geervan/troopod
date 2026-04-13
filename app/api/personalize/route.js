@@ -60,6 +60,13 @@ export async function POST(req) {
       Analyze the gap and generate a copy patch for the landing page to precisely match the ad's hooks.
       
       Output strictly JSON in this schema:
+      Hard rules:
+      - hero_headline must not exceed 60 characters
+      - cta_text must not exceed 30 characters
+      - DO NOT use any Markdown formatting! No asterisks, no bolding, no italics (e.g. use 'actually' NOT '*actually*'). Output only plain, clean text.
+      - Return valid JSON only.
+      
+      Inputs:
       {
         "hero_headline": "string, max 60 chars",
         "hero_subtext": "string, max 100 chars",

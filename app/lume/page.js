@@ -114,7 +114,7 @@ function LumeContent() {
       <footer className="lume-footer">
         <p>© 2026 Lumé Skincare — Clean skincare, clinically tested.</p>
         <p style={{ marginTop: '8px', fontSize: '11px', opacity: 0.6 }}>
-          This is a demo landing page for the Troopod AI PM assignment.
+          This is a demo landing page for the Geervan AI PM assignment.
         </p>
       </footer>
 
@@ -122,7 +122,7 @@ function LumeContent() {
       {isPersonalized && (
         <div className="lume-personalized-banner">
           <span className="banner-dot" />
-          Personalized by Troopod AI
+          Personalized by Geervan AI
         </div>
       )}
     </div>

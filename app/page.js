@@ -170,11 +170,11 @@ export default function OutlawPage() {
       {/* Nav */}
       <nav className="o-nav">
         <div className="o-logo">
-          <span className="o-logo-mark">T</span>
-          <span className="o-logo-text">TROO<span>POD</span></span>
+          <span className="o-logo-mark">G</span>
+          <span className="o-logo-text">GEER<span>VAN</span></span>
         </div>
         <div className="o-header-credits" style={{ fontFamily: 'var(--o-font-mono, monospace)', fontSize: '11px', color: '#111', backgroundColor: '#f1f1f1', textTransform: 'uppercase', letterSpacing: '0.05em', marginRight: 'auto', marginLeft: '2rem', padding: '6px 12px', border: '1px solid #e5e5e5', borderRadius: '6px', fontWeight: '500' }}>
-          TROOPOD: AI PM Internship Assignment by Geervan
+          GEERVAN: AI PM Internship Assignment
         </div>
         <ul className="o-nav-links">
           <li><a href="/lume">lumé demo</a></li>
